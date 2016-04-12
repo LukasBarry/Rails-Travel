@@ -1,0 +1,30 @@
+<h1>TRAVEL</h1>
+<p>Where would you like to travel?</p>
+<%= @homeland %>
+
+<ul>
+<% @countries.each do |country| %>
+  <li>
+  <%= country %>
+  <% end %>
+  </li>
+</ul>
+
+<%= image_tag "chile.jpg", alt:"Chile", class: "img-responsive" %>
+</br>
+<ul>
+<% @countrypics.each do |pic| %>
+  <p>
+  <%= image_tag pic, class: "img-responsive" %>
+  <% end %>
+</p>
+</ul>
+
+<ul>
+<% @united_states.each do |x, y| %>
+  <li>
+    <%= x.titleize + ": " %>
+    <%= y %>
+  <% end %>
+  </li>
+</ul>
