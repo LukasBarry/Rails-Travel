@@ -20,8 +20,11 @@
         <div class="panel-body">
          <h2><%= destination.city %></h2>
          <h3><%= destination.country %></h3>
+         <p>Population: <%= destination.population %></p>
          <p><%= destination.description %></p>
-
+         <% if destination.avatar_file_name != nil %>
+         <%= image_tag destination.avatar.url(:thumb), class: "img-responsive" %>
+         <% end %>
          <div class="btn-group">
           <%= link_to 'Show', destination, class: "btn btn-primary" %>
           <%= link_to 'Edit', edit_destination_path(destination), class: "btn btn-success" %>
