@@ -9,8 +9,9 @@
 <h2>Population: <%= @destination.population %></h2>
 
 <p> <%= @destination.description %></p>
-
+<% if @destination.avatar_file_name != nil %>
 <%= image_tag @destination.avatar.url(:medium) %>
+<% end %>
 <br />
 <br />
 <div class="btn-group">
